@@ -37,7 +37,7 @@
         </table>
     </center>
     <p align="center">
-        <a href="index.html"> กลับไปหน้าหลัก</a>
+        <a href="index.php"> กลับไปหน้าหลัก</a>
     </p>
 </body>
 
