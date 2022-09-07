@@ -12,7 +12,16 @@
     <center>
         <h1>Webboard's Nwpatt</h1>
         <hr>
-        <p> ต้องการดูกระทู้หมายเลข <?php echo $_GET["id"] ?></p><br>
+        <p> ต้องการดูกระทู้หมายเลข <?php echo $_GET["id"] ?></p>
+        <?php
+        $count = $_GET["id"];
+        if ($count % 2 == 0) {
+            echo "<p>เป็นกระทู้หมายเลขคู่</p>";
+        } else {
+            echo "<p>เป็นกระทู้หมายเลขคี่</p>";
+        }
+        ?>
+        <br>
         <table style="border: 2px solid black ; width: 40%">
             <td style="background-color: #6cd2fe">แสดงความคิดเห็น</td>
             <tr>
@@ -31,4 +40,5 @@
         <a href="index.html"> กลับไปหน้าหลัก</a>
     </p>
 </body>
+
 </html>

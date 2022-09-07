@@ -12,10 +12,19 @@
     <h1 style="text-align: center">Webboard's Nwpatt</h1>
     <hr>
     <center>
-        เข้าสู่ระบบด้วย <br>
-        Login = <?php echo $_POST["login"]; ?><br>
-        Password = <?php echo $_POST["pwd"]; ?>
+        <?php
+        $login = $_POST["login"];
+        $pwd = $_POST["pwd"];
+
+        if (($login == "admin") && ( $pwd == "ad1234")){
+            echo "<p>ยินดีต้อนรับคุณ ADMIN</p>";}
+        elseif (($login == "member") && ($pwd == "mem1234")){
+            echo "<p>ยินดีต้อนรับคุณ MEMBER</p>";}
+        else{
+            echo "<p>ชื่อบัญชีหรอืรหัสผ่านไม่ถูกต้อง</p>";}
+        ?>
     </center>
+
 </body>
 
 </html>
