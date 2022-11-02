@@ -7,9 +7,11 @@ session_start();
     $gender = $_POST['gender'];
     $email  = $_POST['email'];
 
+    // ออกสอบ
     $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8", "root", "");
     $passwd = sha1($passwd);
 
+    // คิวรี่ห้าม login ซ้ำ ออกสอบ!!
     $sql = "SELECT * FROM user where login='$login'";
     $result = $conn->query($sql);
     if($result->rowCount()==1){
